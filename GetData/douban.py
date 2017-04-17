@@ -264,10 +264,11 @@ def save_longcritic(filename, baseurl, session):
                 print 'error page:', page
                 continue
         next_page = soup.find('span', "next")
-        next_page_url = next_page.find('a')
-        if next_page_url is not None:
-            next_page_url = next_page_url.get('href')
-        page = page + 1
+        if next_page is not None:
+            next_page_url = next_page.find('a')
+            if next_page_url is not None:
+                next_page_url = next_page_url.get('href')
+            page = page + 1
     file_.close()
     print 'page = ', page
 
@@ -277,13 +278,16 @@ def main():
     main_url = 'https://movie.douban.com/cinema/nowplaying/haerbin/'
     main_html = askUrl(main_url)
     film_dict = GetTitleUrl(main_html)
+    file_= open('../../data/douban_data/movie.txt','w')
     for film in film_dict:
         ls = Get_file_critic_(film_dict[film])
         print film.decode('utf-8'), ls
-        save_filecritic(unicode(film, 'utf-8'), ls[0], session)
+        file_.write('title:'+film+'\n'+'short:'+ls[0]+'\nlong'+ls[2]+'\n')
+        #save_filecritic(unicode(film, 'utf-8'), ls[0], session)
         save_longcritic(unicode(film, 'utf-8'), ls[2], session)
     #save_filecritic('file', 'https://movie.douban.com/subject/26704592/comments?status=P', session)
     #save_longcritic('long_test', 'https://movie.douban.com/subject/26309788/reviews', session)
+    file_.close()
 
 if __name__ == '__main__':
     main()
