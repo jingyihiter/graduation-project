@@ -13,4 +13,5 @@ my undergraduation project-weichatrobot in movies
 
 
 三、[猫眼电影影评数据抓取](https://github.com/jingyihiter/graduation-project/blob/master/GetData/maoyan.py)
->获取手机端m.maoyan.com的影评数据
+>1、获取手机端m.maoyan.com的影评数据<br>
+>2、存储到mysql数据库中，并备份成sql文件<br>
