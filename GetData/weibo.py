@@ -557,13 +557,38 @@ def Get_movie_comment(filmname, filmurl, session):
     Get_hot_comment(0, filmurl, filmname, session)  # 差评微博
 
 
+def fish_data(session):
+    '''
+    钓鱼
+    '''
+    fish_headers = headers.copy()
+    fish_headers['Host'] = 'm.weibo.cn'
+    fish_headers['X-Requested-With'] = 'XMLHttpRequest'
+    fish_headers['Referer'] = 'http://m.weibo.cn/mblog'
+    fish_headers['Origin'] = 'http://m.weibo.cn'
+    blogcontent = '速度与激情8 你给几分？@爱上电影-'
+    formdata = {
+        'content': blogcontent,
+        'annotations': '',
+        'st': 'aefc55',
+    }
+    fish_url = 'http://m.weibo.cn/mblogDeal/addAMblog'
+    resp = session.post(fish_url, data=formdata, headers=fish_headers)
+    response_json = resp.json()
+    if response_json['ok'] == 1:
+        print 'send successful'
+    else:
+        print 'send failure'
+
+
 def main():
     username = '18045177508'
     password = 'MJY123456'
     session = login_simulate(username, password)
-    moive_dict = Get_movies(session)
-    for item in moive_dict:
-        Get_movie_comment(item, moive_dict[item], session)
+    fish_data(session)
+    #moive_dict = Get_movies(session)
+    # for item in moive_dict:
+    #    Get_movie_comment(item, moive_dict[item], session)
 
     #Get_relation('file', 'http://m.weibo.cn/p/index?containerid=100120177778_-_cardlist_huati&page=1&count=20&luicode=10000011&lfid=100120177778&featurecode=20000180', session)
     #Get_tuan_comment('file', 'http://m.weibo.cn/p/index?containerid=230530100120107740__group__mobile_info_-_pageapp%253A230564a2607872b4b3f8d684a4b8acbc65b4d7&luicode=10000011&lfid=230530100120107740__all__mobile_info_-_pageapp%3A230564a2607872b4b3f8d684a4b8acbc65b4d7&featurecode=20000180', session)
