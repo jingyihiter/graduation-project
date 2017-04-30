@@ -23,6 +23,13 @@ my undergraduation project-weichat-robot in movies
 >2、存储到mysql数据库中，并备份成sql文件<br>
 >3、存储到sqlite3数据库中
 
+
+四、[现有数据](https://github.com/jingyihiter/graduation-project/tree/master/GetData/sqlite3_data)
+>1、时间 2017.4.30 <br>
+>2、数目 微博24058条 豆瓣21012条 猫眼11854条<br>
+
+
+
 第二部分：问答系统
 ===============
 
