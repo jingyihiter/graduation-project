@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: lib/lucene-core-6.5.1.jar lib/lucene-queryparser-6.5.1.jar lib/lucene-queries-6.5.1.jar lib/lucene-highlighter-6.5.1.jar lib/lucene-analyzers-common-6.5.1.jar lib/lucene-memory-6.5.1.jar
+Main-Class: jingyi.SearcherMovies
+
+

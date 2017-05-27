@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_111"/>
+	<classpathentry kind="lib" path="C:/Program Files/java/jdk1.8.0_111/lib/lucene-analyzers-common-6.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/java/jdk1.8.0_111/lib/lucene-core-6.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/java/jdk1.8.0_111/lib/lucene-highlighter-6.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/java/jdk1.8.0_111/lib/lucene-memory-6.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/java/jdk1.8.0_111/lib/lucene-queryparser-6.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/java/jdk1.8.0_111/lib/lucene-queries-6.5.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
