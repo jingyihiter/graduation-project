@@ -27,19 +27,39 @@ my undergraduation project-weichat-robot in movies
 四、[现有数据](https://github.com/jingyihiter/graduation-project/tree/master/GetData/sqlite3_data)
 >1、时间 2017.4.30 <br>
 >2、数目 微博24058条 豆瓣21012条 猫眼11854条<br>
+>3、时间 2017.5.8  微博评论8万条,作为检索数据源<br>
+>4、评价数据源 2017.5.24 新爬取的微博数据2700条微博<br>
 
 
-
-第二部分：问答系统
+第二部分：[检索系统构建](https://github.com/jingyihiter/graduation-project/tree/master/SearchModel/movieRobot)
 ===============
+Lucene 检索工具
+>1、构建索引<br>
+>2、检索结果<br>
 
 
 
-
-第三部分：微信机器人设计
+第三部分：[微信机器人设计](https://github.com/jingyihiter/graduation-project/tree/master/wxpy)
 ====================
+>wxpy应用
 
 
+第四部分：[检索模型的评价](https://github.com/jingyihiter/graduation-project/tree/master/evaluate)
+========================
+检索模型<br>
+>1、BM25算法<br>
+>2、布尔模型<br>
+>3、Dirichlet语言模型<br>
+>4、JelinekMercer语言模型<br>
+
+评价数据源<br>
+>1、采用新爬取的数据源作为评价数据<br>
+>2、将原始数据去重后分为5类，取其中一类作为评价数据<br>
+
+评价方法<br>
+>1、bleu值 <br>
+>2、检索微博计算评论相关的bleu值
+>3、检索评论计算微博相关的bleu值
 
 
 
